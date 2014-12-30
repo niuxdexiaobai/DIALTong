@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost" >
+    
+    <LinearLayout
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical">
+	    <TabWidget 
+		    android:id="@android:id/tabs"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+        	/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        >
+	        <RadioGroup 
+	                android:id="@+id/main_tab"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_marginLeft="88dp"
+	                >
+	                <LinearLayout 
+	                    android:id="@+id/callrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/callrecords_btn"
+	                        android:text="@string/tv_contacts_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+	                <LinearLayout 
+	                    android:id="@+id/favoritesrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/favoritesrecords_btn"
+	                        android:text="@string/tv_favoritescontacts_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+            	</RadioGroup>
+            	<LinearLayout 
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:orientation="horizontal"
+            	    android:layout_marginLeft="14dp"
+            	    >
+            	    <TextView
+            	        android:id="@+id/contacts_add"
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:text="添加"
+            	        android:layout_margin="8dp"
+	                />
+            	</LinearLayout>
+            	
+            	</LinearLayout>
+            	
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="@drawable/maintab_toolbar_bg"
+	        >
+    </LinearLayout>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    >
+	    <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="6"
+			>
+         </FrameLayout> <!-- -->
+            	<!-- 下面的都在另一个xml里面contact_select_item_page -->
+         <!-- <com.zhy.dialtong.ClearEditText
+            android:id="@+id/filter_edit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dip"
+	        android:background="@drawable/sorlistview_search_bar_edit_selector"
+	        android:drawableLeft="@drawable/sorlistview_search_bar_icon_normal"
+	        android:hint="请输入关键字"
+	        android:singleLine="true"
+	        android:textSize="15.0dip" /> 
+            	    
+	        <com.zhy.dialtong.view.SlidingLinearLayout
+	        android:id="@+id/slidingid"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" >
+	            
+	            <ListView
+	            android:id="@+id/acbuwa_list"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="center"
+	            android:visibility="visible" />  -->
+	            <!-- android:cacheColorHint="#000000"
+	            android:divider="#00000000"
+	            android:fadingEdge="none"
+	            android:scrollbars="none"
+	            android:scrollingCache="false"  -->
+	            <!-- 下面的都在另一个xml里面contact_select_item_page -->
+	      <!--  </com.zhy.dialtong.view.SlidingLinearLayout>
+	        
+	        <com.zhy.dialtong.view.QuickAlphabeticBar
+	        android:id="@+id/fast_scroller"
+	        android:layout_width="30.0dip"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="right|center"
+	        
+	        android:scaleType="centerInside"
+	         />
+
+		    <TextView
+		        android:id="@+id/fast_position"
+		        android:layout_width="70dip"
+		        android:layout_height="70dip"
+	            android:layout_gravity="center"
+		        android:background="@drawable/sorlistview_show_head_toast_bg"
+		        android:gravity="center"
+		        android:textColor="#ffffffff"
+		        android:textSize="30dip"
+		        android:visibility="invisible" />  -->
+	        
+	        <!-- <ListView
+            android:id="@+id/callrecordlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"/>
+	        
+	        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/sorlistview_show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+	        
+	        <com.zhy.dialtong.SideBar
+	            android:id="@+id/sidrbar"
+	            android:layout_width="30.0dip"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="right|center" />  -->
+	        
+	        
+	        
+	     
+	        
+		
+		<!-- 到此截止 -->
+		
+	   <!-- <FrameLayout 
+         android:id="@+id/realtabcontent"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom"
+         android:layout_weight="1">
+         <LinearLayout 
+             android:id="@+id/main_tab_layout"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="bottom"
+		     android:background="@drawable/maintab_toolbar_bg"
+		     android:orientation="horizontal"
+             >
+             
+             <FrameLayout 
+                 android:layout_width="0dp"
+		         android:layout_height="match_parent"
+		         android:layout_weight="1"
+                 >
+                 
+                 <LinearLayout
+	                 android:id="@+id/main_tab_wxlayout"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="match_parent"
+	                 android:layout_gravity="center_horizontal"
+	                 android:gravity="center"
+	                 android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/wx_textview"
+                    style="@style/tab_rb_style"
+                    android:text="拨号" >
+                </TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_txllayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txl_textview"
+                    style="@style/tab_rb_style"
+                    android:text="通话记录" >
+                </TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_fxlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+
+                <TextView
+                    android:id="@+id/fx_textview"
+                    style="@style/tab_rb_style"
+                    android:text="联系人" >
+                </TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_wolayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/wo_textview"
+                    style="@style/tab_rb_style"
+                    android:text="其他" >
+                </TextView>
+            </LinearLayout>
+
+             </FrameLayout>
+         </LinearLayout>
+     </FrameLayout>  -->
+		
+	    
+     
+     </LinearLayout>
+     
+	</LinearLayout>
+    
+</TabHost>

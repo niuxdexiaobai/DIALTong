@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@android:id/tabhost" >
+    
+    <LinearLayout
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical">
+	    <TabWidget 
+		    android:id="@android:id/tabs"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+        	/>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        >
+	        <RadioGroup 
+	                android:id="@+id/main_tab"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_marginLeft="88dp"
+	                >
+	                <LinearLayout 
+	                    android:id="@+id/callrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/callrecords_btn"
+	                        android:text="@string/tv_callrecords_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+	                <LinearLayout 
+	                    android:id="@+id/favoritesrecords"
+	                    android:layout_width="0dp"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    >
+	                    <TextView 
+	                        android:id="@+id/favoritesrecords_btn"
+	                        android:text="@string/tv_favoritesrecords_btn"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_margin="8dp"
+	                        />
+	                </LinearLayout>
+            	</RadioGroup>
+            	<LinearLayout 
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:orientation="horizontal"
+            	    android:layout_marginLeft="14dp"
+            	    >
+            	    <TextView
+            	        android:id="@+id/recentcall_del"
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:text="清除"
+            	        android:layout_margin="8dp"
+	                />
+            	</LinearLayout>
+            	
+            	</LinearLayout>
+            	
+	    	<LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="@drawable/maintab_toolbar_bg"
+	        >
+    		</LinearLayout>
+    		
+	    	<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:orientation="vertical"
+		    	>
+            	<FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_gravity="top"
+	            android:layout_weight="6"
+				>
+		        <!-- <ListView
+	            android:id="@+id/callrecordlist"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_gravity="center"/>  -->
+		        </FrameLayout>
+		        
+		         <!-- <FrameLayout 
+         android:id="@+id/realtabcontent"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom"
+         android:layout_weight="1">
+         <LinearLayout 
+             android:id="@+id/main_tab_layout"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="bottom"
+		     android:background="@drawable/maintab_toolbar_bg"
+		     android:orientation="horizontal"
+             >
+             
+             <FrameLayout 
+                 android:layout_width="0dp"
+		         android:layout_height="match_parent"
+		         android:layout_weight="1"
+                 >
+                 
+                 <LinearLayout
+	                 android:id="@+id/main_tab_wxlayout"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="match_parent"
+	                 android:layout_gravity="center_horizontal"
+	                 android:gravity="center"
+	                 android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/wx_textview"
+                    style="@style/tab_rb_style"
+                    android:text="拨号" >
+                </TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_txllayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txl_textview"
+                    style="@style/tab_rb_style"
+                    android:text="通话记录" >
+                </TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_fxlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+
+                <TextView
+                    android:id="@+id/fx_textview"
+                    style="@style/tab_rb_style"
+                    android:text="联系人" >
+                </TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/main_tab_wolayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/wo_textview"
+                    style="@style/tab_rb_style"
+                    android:text="其他" >
+                </TextView>
+            </LinearLayout>
+
+             </FrameLayout>
+         </LinearLayout>
+     </FrameLayout>  -->
+     
+		        
+     </LinearLayout>
+     
+	</LinearLayout>
+    
+</TabHost>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhy.dialtong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 以下是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+    <!-- 以上是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> 
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <uses-feature android:name="android.hardware.wifi" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    <application
+        android:name="com.zhy.dialtong.fragment.dial.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/iconforios96"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.zhy.dialtong.view.HomeTabHostAcitivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.view.ContactsTabHostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.fragment.DialFragment"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.view.RecentCallTabHostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zhy.dialtong.fragment.MoreFragment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity android:name="com.zhy.dialtong.fragment.ContactsActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ContactsFavorActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsDetailActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallFragment"/>
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallFavorActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.RecentCallDetailActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.MoreWifiSettingPage"/>
+        <activity android:name="com.zhy.dialtong.fragment.WifiListActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsImageCameraActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.ConstactsEditActivity"/>
+        <activity android:name="com.zhy.dialtong.fragment.DialShowFilterNumberActivity"/>
+        
+        <activity android:name="com.zhy.dialtong.fragment.CalllogDetailActivity">
+        <intent-filter>
+                <action android:name="org.flyingcat.phonebook.action.viewcalllogs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+        <!-- <activity android:name="com.zhy.dialtong.fragment.DialFragment"/> -->
+        <!-- <activity android:name="com.zhy.dialtong.fragment.RecentCallFragment"/> -->
+        <!-- <activity android:name="com.zhy.dialtong.fragment.ContactsFragment"/>   -->
+        <!-- <activity android:name="com.zhy.dialtong.fragment.MoreFragment"/> -->
+        <!-- <activity android:name="com.zhy.dialtong.fragment.Item_Sort_Listview"/> -->
+        <service
+            android:name="com.zhy.dialtong.fragment.dial.T9Service" />
+    </application>
+
+</manifest>

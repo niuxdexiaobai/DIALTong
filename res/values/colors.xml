@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#00AED6</color>
+    <color name="popup_title_color">#ffc9cdd1</color>
+    <color name="advance_setting_item_bg">#fff8f8f8</color>
+    <color name="light_blue">#33b5e5</color>
+    <color name="black">#000000</color>
+    
+</resources>
